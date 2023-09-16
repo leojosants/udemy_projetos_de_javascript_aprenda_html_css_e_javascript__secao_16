@@ -13,10 +13,10 @@
 
 		<!--  -->
 		<div class="container">
-			<div id="difficulty_section">
+			<div id="difficulty_section" data_difficulty_section>
 				<label for="difficulty">Escolha a dificuldade:</label>
 
-				<select name="difficulty" id="difficulty">
+				<select name="difficulty" id="difficulty" data_difficulty>
 					<option value="" aria-readonly="true">Selecione</option>
 					<!-- readonly -->
 					<option value="1">Fácil</option>
@@ -25,25 +25,26 @@
 				</select>
 			</div>
 
-			<div id="game_section">
+			<div id="game_section" data_game_section>
 				<p>Estou pensando em um número de 1 a 100. Tente adivinhar ! ! !</p>
 
-				<div id="guess_section">
+				<div id="guess_section" data_guess_section>
 					<input
 						type="text"
 						name="guess"
 						id="guess"
 						placeholder="Digite sua resposta aqui."
+						data_guess
 					/>
 
-					<button id="guess_button">Enviar</button>
+					<button id="guess_button" data_guess_button>Enviar</button>
 				</div>
 
-				<p id="result">texto...</p>
+				<p id="result" data_result>texto...</p>
 
-				<button id="reset_button">Jogar novamente</button>
+				<button id="reset_button" data_reset_button>Jogar novamente</button>
 
-				<p>Tentativas restantes: <span id="tries_left">5</span></p>
+				<p>Tentativas restantes: <span id="tries_left" data_tries_left>5</span></p>
 			</div>
 		</div>
 	</body>
