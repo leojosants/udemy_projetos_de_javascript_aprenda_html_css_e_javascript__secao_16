@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#difficulty_section, 
+#game_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#guess_section {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+select, input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+input {
+    margin: 0 1rem;
+    padding: 0.6rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #666666;
+}
+
+#result {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    color: #b30ce6;
+}
+
+#game_section,
+#reset_button {
+    display: none;
+}
+
+#reset_button {
+    margin: 0 auto;
+}

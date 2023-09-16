@@ -13,8 +13,9 @@
 
 		<!--  -->
 		<div class="container">
-			<div class="difficulty_section">
+			<div id="difficulty_section">
 				<label for="difficulty">Escolha a dificuldade:</label>
+
 				<select name="difficulty" id="difficulty">
 					<option value="" aria-readonly="true">Selecione</option>
 					<!-- readonly -->
@@ -26,17 +27,22 @@
 
 			<div id="game_section">
 				<p>Estou pensando em um número de 1 a 100. Tente adivinhar ! ! !</p>
+
 				<div id="guess_section">
 					<input
 						type="text"
 						name="guess"
 						id="guess"
-						placeholder="Digite sua resposta"
+						placeholder="Digite sua resposta aqui."
 					/>
+
 					<button id="guess_button">Enviar</button>
 				</div>
-				<p id="result">Texto...</p>
-				<button id="resent_button">Jogar novamente</button>
+
+				<p id="result">texto...</p>
+
+				<button id="reset_button">Jogar novamente</button>
+
 				<p>Tentativas restantes: <span id="tries_left">5</span></p>
 			</div>
 		</div>
