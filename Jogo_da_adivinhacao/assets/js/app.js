@@ -35,5 +35,39 @@ difficulty_select.addEventListener('change', function () {
             break;
     };
 
-    console.log(maximum_tries);
+    tries_left = maximum_tries;
+    tries_left_span.textContent = maximum_tries;
+    random_number = Math.floor(Math.random() * 100) + 1;
+
+    difficulty_section.style.display = 'none';
+    game_section.style.display = 'block';
+    guess_section.style.display = 'flex';
+
+    console.log(random_number)
+});
+
+/* */
+guess_button.addEventListener('click', function () {
+    const guess = parseInt(guess_input.value);
+
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+        result_paragraph.textContent = 'Por favor, insira um número de 1 a 100.';
+    }
+    else {
+        if (guess === random_number) {
+            result_paragraph.textContent = `Parabéns! Você acertou em ${maximum_tries - tries_left + 1} tentativa(s).`;
+            reset_button.style.display = 'block';
+            guess_section.style.display = 'none';
+        }
+        else if (guess > random_number) {
+            result_paragraph.textContent = 'Muito alto, tente novamente.';
+            tries_left--;
+        }
+        else {
+            result_paragraph.textContent = 'Muito baixo, tente novamente.';
+            tries_left--;
+        };
+
+        tries_left_span.textContent = tries_left;
+    };
 });
